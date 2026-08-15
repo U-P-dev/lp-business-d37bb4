@@ -228,20 +228,38 @@
 <link rel="canonical" href="./">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "日本リフォーム産業株式会社 本社", "address": {"@type": "PostalAddress", "streetAddress": "日本、〒167-0053 東京都杉並区西荻南２丁目２５−１５"}, "telephone": "03-3334-6111"}</script>
 <style>
-.vbar{position:relative;z-index:10000;background:#1c1c1c;color:#fff;
-  padding:12px 0;font-size:13px;line-height:1.7;font-family:sans-serif}
-.vbar .wrap{max-width:1080px;margin:0 auto;padding:0 20px;
-  display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
-.vbar__note{opacity:.75;flex:1 1 260px;min-width:0}
-.vbar__list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.vbar__link{display:inline-block;color:#fff;text-decoration:none;
-  padding:6px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
-.vbar__link[aria-current]{background:#fff;color:#1c1c1c;font-weight:700;box-shadow:none}
+nav.vbar{position:relative !important;z-index:10000 !important;display:block !important;
+  background:#1c1c1c !important;color:#fff !important;margin:0 !important;
+  padding:12px 0 !important;font-size:13px !important;line-height:1.7 !important;
+  font-family:sans-serif !important;max-width:none !important;
+  opacity:1 !important;visibility:visible !important;transform:none !important}
+nav.vbar .vbar__inner{max-width:1080px !important;margin:0 auto !important;
+  padding:0 20px !important;display:flex !important;flex-wrap:wrap !important;
+  gap:10px 18px !important;align-items:center !important;width:auto !important}
+nav.vbar .vbar__note{opacity:.75 !important;flex:1 1 260px !important;
+  min-width:0 !important;color:#fff !important}
+nav.vbar .vbar__list{display:flex !important;flex-wrap:wrap !important;gap:8px !important;
+  list-style:none !important;margin:0 !important;padding:0 !important}
+nav.vbar .vbar__list li{display:block !important;margin:0 !important;padding:0 !important;
+  list-style:none !important;width:auto !important}
+nav.vbar .vbar__link{display:inline-block !important;color:#fff !important;
+  text-decoration:none !important;padding:6px 14px !important;font-size:13px !important;
+  border-radius:999px !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4) !important;
+  background:transparent !important;opacity:1 !important;visibility:visible !important;
+  transform:none !important;letter-spacing:normal !important}
+nav.vbar .vbar__link[aria-current]{background:#fff !important;color:#1c1c1c !important;
+  font-weight:700 !important;box-shadow:none !important}
+@media (max-width:520px){
+  nav.vbar{padding:8px 0 !important;font-size:12px !important;line-height:1.5 !important}
+  nav.vbar .vbar__inner{padding:0 14px !important;gap:8px 10px !important}
+  nav.vbar .vbar__link{padding:5px 10px !important;font-size:12px !important}
+}
 #contact{padding:72px 20px}
 #contact .narrow{max-width:560px;margin:0 auto}
 #contact .cta h2{font-size:24px;margin:0 0 12px}
 #contact .cta__body{margin:0 0 24px;line-height:1.9}
 #contact .cta__actions{margin:0 0 28px}
+#contact .hero__actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 #contact .form{display:grid;gap:18px;text-align:left}
 #contact .field{display:grid;gap:8px}
 #contact .field label{font-size:14px;font-weight:700}
@@ -256,6 +274,10 @@
 #contact .ic{flex:none}
 #contact .form__note{font-size:12px;opacity:.7;margin:0}
 #contact .form__done{display:none}
+/* 値の入らなかった任意欄は行ごと畳む（テンプレの「無ければ行ごと削る」の実装。
+   :has() 非対応のブラウザでは従来どおり空欄が残るだけで、悪化はしない） */
+dd:empty{display:none !important}
+div:has(> dd:empty){display:none !important}
 #privacy-policy{padding:56px 20px;font-size:13px;line-height:2}
 #privacy-policy .narrow{max-width:720px;margin:0 auto}
 #privacy-policy h2{font-size:18px;margin:0 0 16px}
@@ -263,11 +285,11 @@
 </style>
 </head>
 <body>
-<nav class="vbar" aria-label="デザイン案の切り替え"><div class="wrap vbar__inner"><span class="vbar__note">エレノアが日本リフォーム産業株式会社 本社様へのご提案として作成した見本です。日本リフォーム産業株式会社 本社様ご自身が公開されているものではありません。</span><ul class="vbar__list"><li><a class="vbar__link" href="../">1　誠実な開示</a></li><li><a class="vbar__link" href="./" aria-current="page">2　静謐な空気</a></li><li><a class="vbar__link" href="../3/">3　動きで魅せる（リッチプラン専用デザイン）</a></li></ul></div></nav>
+<nav class="vbar" aria-label="デザイン案の切り替え"><div class="wrap vbar__inner"><span class="vbar__note">エレノアが日本リフォーム産業株式会社 本社様へのご提案として作成した見本です。日本リフォーム産業株式会社 本社様ご自身が公開されているものではありません。</span><ul class="vbar__list"><li><a class="vbar__link" href="../">1　誠実な開示</a></li><li><a class="vbar__link" href="./" aria-current="page">2　静謐な空気</a></li><li><a class="vbar__link" href="../3/">3　作品で選ぶ（リッチプラン専用デザイン）</a></li></ul></div></nav>
 
 <header>
   <span class="brand">
-    NIHON REFORM SANGYO CO., LTD.
+    Nihon Reform Sangyo
   </span>
   <nav>
     <a href="#about">ABOUT</a>
@@ -283,13 +305,13 @@
   
   <div class="hero">
     <div class="hero__photo ph">
-      <div class="slide s1"><img src="https://images.unsplash.com/photo-1546967900-1bea5f16b69d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8N3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="eager" fetchpriority="high" decoding="async"></div>
-      <div class="slide s2"><img src="https://images.unsplash.com/photo-1556586038-29f26c3ceb20?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8OHx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
-      <div class="slide s3"><img src="https://images.unsplash.com/photo-1601375476071-8476ef11f19d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8OXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
+      <div class="slide s1"><img src="https://images.unsplash.com/photo-1600499273056-52b8a9f6859f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTF8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzY5MTQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="eager" fetchpriority="high" decoding="async"></div>
+      <div class="slide s2"><img src="https://images.unsplash.com/photo-1717903781891-de75baaa2de6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTJ8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzY5MTQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
+      <div class="slide s3"><img src="https://images.unsplash.com/photo-1564909021375-9b66f5731eab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NjkxNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
     </div>
     <div class="hero__logo">
       <div class="hero__mark">
-        NIHON REFORM SANGYO CO., LTD.
+        Nihon Reform Sangyo Co., Ltd.
       </div>
       <div class="hero__sub">
         日本リフォーム産業株式会社 本社
@@ -304,15 +326,15 @@
       <div class="split__text fade-up">
         <p class="eyebrow">ABOUT</p>
         <h2>
-          住み慣れた家で、<br>これからも暮らしていく。
+          住まいをととのえる、<br>西荻南からのリフォーム。
         </h2>
         <p class="lead">
-          日本リフォーム産業株式会社は、東京都杉並区西荻南を拠点とするリフォーム会社です。水まわりの入れ替えから間取りの変更まで、住まいの困りごとにひとつずつ向き合い、現地を確かめ、暮らしに合った改修の形をご提案します。長く住む家だからこそ、急がず、丁寧に。
+          日本リフォーム産業株式会社 本社は、東京都杉並区西荻南で住宅リフォームを手がけています。キッチンや浴室の設備交換から、内装の張り替え、外壁や屋根の塗装まで、住まいの困りごとに幅広く対応。まずは現地を見て、暮らし方とご予算をうかがってから、工事の内容をご提案します。
         </p>
         <a class="more" href="#salon">VIEW MORE</a>
       </div>
       <div class="split__duo">
-        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1633113211800-4acbb59fc254?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTB8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzQyODU1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内の抜け" loading="lazy" decoding="async"></div>
+        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1587136527307-f53f514267d7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NjkxNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内の抜け" loading="lazy" decoding="async"></div>
         <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1768659347532-74d3b1efb0ae?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGhhbmRzJTIwY2xvc2V1cHxlbnwxfDF8fHwxNzg2NzQyODU1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="手元・道具" loading="lazy" decoding="async"></div>
       </div>
     </div>
@@ -324,15 +346,15 @@
       <div class="split__text fade-up">
         <p class="eyebrow">SALON</p>
         <h2>
-          毎日使う場所から、<br>住まいを整える。
+          暮らしの続きを、<br>工事のあとに残す。
         </h2>
         <p class="lead">
-          ご相談は、間取り図と現地の採寸から始まります。キッチンや浴室の使い勝手、収納の位置、光の入り方。日々の動きを伺いながら、図面と見本材で仕上がりを一緒に確かめます。工事中は養生と片付けを欠かさず、住みながらの改修にも配慮します。完成後の暮らしを思い描ける打ち合わせを心がけています。
+          リフォームは、住みながら進むことが少なくありません。だからこそ、養生の範囲や作業の時間帯、粉じんや音の出る工程を事前にお伝えし、ご家族の生活に合わせて工程を組みます。工事後は仕上がりをご一緒に確認し、気になる箇所があればその場でうかがいます。
         </p>
       </div>
       <div class="split__duo">
-        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1600499273056-52b8a9f6859f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTF8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzQyODU1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="セット面" loading="lazy" decoding="async"></div>
-        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1717903781891-de75baaa2de6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTJ8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzQyODU1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="窓辺・植物" loading="lazy" decoding="async"></div>
+        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1637613345110-823bfaea11fb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8M3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NjkxNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="セット面" loading="lazy" decoding="async"></div>
+        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1547087200-703f16b29590?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8NHx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NjkxNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="窓辺・植物" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </section>
@@ -341,15 +363,15 @@
   <section id="menu" class="gap-l">
     <div class="fade-up">
       <p class="eyebrow">MENU</p>
-      <h2>リフォームメニュー</h2>
+      <h2>対応する工事</h2>
       <ul class="menu-list">
-        <li><span class="nm">キッチンリフォーム</span><span class="dots"></span><span class="pr"></span></li>
-        <li><span class="nm">浴室・洗面リフォーム</span><span class="dots"></span><span class="pr"></span></li>
-        <li><span class="nm">内装・クロス張り替え</span><span class="dots"></span><span class="pr"></span></li>
-        <li><span class="nm">外壁・屋根塗装</span><span class="dots"></span><span class="pr"></span></li>
+        <li><span class="nm">キッチン・浴室・洗面・トイレの水まわりリフォーム</span><span class="dots"></span><span class="pr">—</span></li>
+        <li><span class="nm">クロス張り替え・床材張り替えなどの内装リフォーム</span><span class="dots"></span><span class="pr">—</span></li>
+        <li><span class="nm">外壁塗装・屋根塗装・屋根の葺き替え</span><span class="dots"></span><span class="pr">—</span></li>
+        <li><span class="nm">間取り変更をともなう増改築・住宅全体の改修</span><span class="dots"></span><span class="pr">—</span></li>
       </ul>
       <p class="menu-note">
-        料金は現地調査のうえ、お見積もりにてご案内します。工期はお住まいの状況により異なります。ご相談はお電話またはメールで承ります。
+        工事の内容と費用は、現地を確認したうえでお見積りいたします。お見積りの内容や工期のご相談は、お電話またはメールでお気軽にお申しつけください。
       </p>
     </div>
   </section>
@@ -358,12 +380,12 @@
   <section class="oneday">
     <div class="oneday__circle fade-up">
       <p class="eyebrow">ONE DAY</p>
-      <h2>西荻南の、ある一日</h2>
+      <h2>一日のこと</h2>
       <p>
-        朝9時、事務所の一日は図面と工程表の確認から始まります。日中は現地調査やお打ち合わせへ。夕方には進み具合を見直し、18時に一日を終えます。ご相談のお電話とメールは、土日も含め毎日承っています。
+        朝9時、その日の現場へ向かいます。夕方18時まで、打ち合わせと工事が行き来する一日。年中無休で承っていますので、平日にお時間の取りにくい方は土日のご相談もどうぞ。
       </p>
     </div>
-    <div class="oneday__bg ph"><img src="https://images.unsplash.com/photo-1784552914380-f62678966f86?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8M3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHN0b3JlZnJvbnQlMjBleHRlcmlvcnxlbnwxfDB8fHwxNzg2NzQyODU0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="外観 or 店内の引き" loading="lazy" decoding="async"></div>
+    <div class="oneday__bg ph"><img src="https://images.unsplash.com/photo-1763971052610-de1850d1a6d5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8Nnx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHN0b3JlZnJvbnQlMjBleHRlcmlvcnxlbnwxfDB8fHwxNzg2NzY5MTQxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="外観 or 店内の引き" loading="lazy" decoding="async"></div>
   </section>
 
   
@@ -375,11 +397,11 @@
           <div><dt>住所</dt><dd>東京都杉並区西荻南２丁目２５−１５</dd></div>
           <div><dt>電話</dt><dd>03-3334-6111</dd></div>
           <div><dt>営業時間</dt><dd>9:00〜18:00</dd></div>
-          <div><dt>定休日</dt><dd>9:00〜18:00</dd></div>
-          <div><dt>アクセス</dt><dd></dd></div>
+          <div><dt>定休日</dt><dd>—</dd></div>
+          <div><dt>アクセス</dt><dd>—</dd></div>
         </dl>
       </div>
-      <div class="ph fade-up"></div>
+      <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1767973852533-5e82ed455dcb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8N3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHN0b3JlZnJvbnQlMjBleHRlcmlvcnxlbnwxfDB8fHwxNzg2NzY5MTQxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="外観" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -397,7 +419,7 @@
 </main>
 
 <footer>
-  <span class="brand">NIHON REFORM SANGYO CO., LTD.</span>
+  <span class="brand">Nihon Reform Sangyo Co., Ltd.</span>
   <p>
     東京都杉並区西荻南２丁目２５−１５<br>03-3334-6111 9:00〜18:00
   </p>
@@ -417,7 +439,7 @@
   document.querySelectorAll('.fade-up').forEach(function(el){ io.observe(el); });
 
 </script>
-<p class="photo-credit" style="font-size:11px;text-align:center;padding:12px 16px;margin:0">Photo by <a href="https://unsplash.com/@boxsquare?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">cody weiss</a>、<a href="https://unsplash.com/@andreaedavis?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Andrea Davis</a>、<a href="https://unsplash.com/@adrienolichon?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Adrien Olichon</a>、<a href="https://unsplash.com/@surface?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Surface</a>、<a href="https://unsplash.com/@wolfart32?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Rodrigo Rodrigues | WOLF Λ R T</a>、<a href="https://unsplash.com/@ryunosuke_kikuno?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Ryunosuke Kikuno</a>、<a href="https://unsplash.com/@declansun?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Declan Sun</a>、<a href="https://unsplash.com/@liliantruong2603?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Trương Tuyết Ly</a> on <a href="https://unsplash.com/?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+<p class="photo-credit" style="font-size:11px;text-align:center;padding:12px 16px;margin:0">Photo by <a href="https://unsplash.com/@ryunosuke_kikuno?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Ryunosuke Kikuno</a>、<a href="https://unsplash.com/@declansun?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Declan Sun</a>、<a href="https://unsplash.com/@aranprime?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">aranprime</a>、<a href="https://unsplash.com/@michael_exploring?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Michael Descharles</a>、<a href="https://unsplash.com/@wolfart32?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Rodrigo Rodrigues | WOLF Λ R T</a>、<a href="https://unsplash.com/@amr_taha?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Amr Taha™</a>、<a href="https://unsplash.com/@kevinwolf?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Kevin Wolf</a>、<a href="https://unsplash.com/@skstrannik?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Sergej *****</a>、<a href="https://unsplash.com/@cronos449?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Jay lee</a> on <a href="https://unsplash.com/?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
 <section id="privacy-policy" class="legal">
   <div class="narrow">
     <h2>プライバシーポリシー</h2>
@@ -436,5 +458,44 @@
   <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookie_ok','1')" style="margin-left:16px;background:#3498db;color:#fff;border:none;padding:6px 16px;cursor:pointer;border-radius:4px;">同意する</button>
 </div>
 <script>if(!localStorage.getItem('cookie_ok'))document.getElementById('cookie-banner').style.display='block';</script>
+<script data-vbar-offset>
+(function(){
+  var bar = document.querySelector('nav.vbar');
+  if (!bar) return;
+  var pinned = [];
+  var scan = function(){
+    pinned = [];
+    var all = document.body.querySelectorAll('*');
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      if (el === bar || bar.contains(el)) continue;
+      var cs = getComputedStyle(el);
+      if (cs.position !== 'fixed') continue;
+      /* 元の top は一度だけ測って覚える。再スキャンで**自分が書いた値**を
+         読むと「top が 60 を超えたから対象外」と判定してしまい、
+         下げたきり追随が止まる（2026-08-15 実測） */
+      var top = el.__vbarTop;
+      if (top === undefined) {
+        top = parseFloat(cs.top);
+        if (isNaN(top) || top > 60) continue;
+        el.__vbarTop = top;
+      }
+      if (el.getBoundingClientRect().height >= innerHeight * 0.9) continue;
+      pinned.push({el: el, top: top});
+    }
+  };
+  var sync = function(){
+    var d = Math.max(0, bar.getBoundingClientRect().bottom);
+    for (var i = 0; i < pinned.length; i++) {
+      pinned[i].el.style.top = (pinned[i].top + d) + 'px';
+    }
+  };
+  var refresh = function(){ scan(); sync(); };
+  addEventListener('scroll', sync, {passive: true});
+  addEventListener('resize', refresh);
+  addEventListener('load', refresh);
+  refresh();
+})();
+</script>
 </body>
 </html>
